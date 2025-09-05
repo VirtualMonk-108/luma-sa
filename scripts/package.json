@@ -1,0 +1,10 @@
+{
+  "name": "luma-sa-scripts",
+  "version": "1.0.0",
+  "scripts": {
+    "init-firestore": "node init-firestore.js"
+  },
+  "dependencies": {
+    "firebase": "^10.12.0"
+  }
+}

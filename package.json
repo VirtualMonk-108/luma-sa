@@ -1,0 +1,23 @@
+{
+  "name": "luma-sa",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "user-app",
+    "backoffice-app",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "npm run dev:user & npm run dev:backoffice",
+    "dev:user": "cd user-app && npm run dev",
+    "dev:backoffice": "cd backoffice-app && npm run dev",
+    "build": "npm run build:shared && npm run build:user && npm run build:backoffice",
+    "build:user": "cd user-app && npm run build",
+    "build:backoffice": "cd backoffice-app && npm run build",
+    "build:shared": "cd shared && npm run build",
+    "install:all": "npm install && cd user-app && npm install && cd ../backoffice-app && npm install && cd ../shared && npm install"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  }
+}
